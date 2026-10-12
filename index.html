@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Bora Navegar | Seu próximo destino</title>
+  <title>Bora Navegar | Passeios de Lancha</title>
 
   <style>
     * {
@@ -42,44 +42,28 @@
       font-size: 14px;
     }
 
-    ```html
-<section class="hero" id="inicio">
-  <h2>Passeio de Lancha em João Pessoa</h2>
-
-  <h3>Rota do Sol ☀️</h3>
-
-  <p>
-    Descubra o litoral de João Pessoa em um passeio privativo,
-    com conforto, segurança e paisagens inesquecíveis.
-  </p>
-
-  <p>
-    📍 Saída: Marina / Praia do Jacaré<br>
-    🕗 Horário de saída: entre 8h e 9h<br>
-    🚤 Passeio privativo<br>
-    🔥 Churrasqueira a bordo<br>
-    🌊 Diversão e vistas incríveis
-  </p>
-
-  <a class="botao"
-     href="https://wa.me/5583993887309"
-     target="_blank"
-     rel="noopener noreferrer">
-    Consulte disponibilidade
-  </a>
-</section>
-```
+    .hero {
+      text-align: center;
+      padding: 75px 20px;
+      background: linear-gradient(135deg, #d8edf2, #ffffff);
+    }
 
     .hero h2 {
       font-size: 36px;
-      margin-bottom: 18px;
+      margin-bottom: 15px;
+    }
+
+    .hero h3 {
+      font-size: 25px;
+      color: #167d91;
+      margin-bottom: 20px;
     }
 
     .hero p {
       font-size: 18px;
-      line-height: 1.6;
-      max-width: 600px;
-      margin: 0 auto 28px;
+      line-height: 1.8;
+      max-width: 650px;
+      margin: 0 auto 25px;
     }
 
     .botao {
@@ -90,6 +74,11 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .botao:hover {
+      background: #105d6b;
     }
 
     .conteudo {
@@ -104,7 +93,7 @@
     }
 
     .conteudo p {
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
     footer {
@@ -118,6 +107,10 @@
     @media (max-width: 600px) {
       .hero h2 {
         font-size: 28px;
+      }
+
+      .hero h3 {
+        font-size: 22px;
       }
 
       nav a {
@@ -135,40 +128,71 @@
 
     <nav>
       <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
+      <a href="#sobre">O passeio</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <main>
+
     <section class="hero" id="inicio">
-      <h2>Seu próximo destino começa aqui!</h2>
+      <h2>Passeio de Lancha em João Pessoa</h2>
+
+      <h3>Rota do Sol ☀️</h3>
 
       <p>
-        Explore novas possibilidades, descubra lugares
-        incríveis e prepare-se para navegar por novas experiências.
+        Descubra o litoral de João Pessoa em um passeio
+        privativo, com segurança, conforto e paisagens
+        inesquecíveis.
       </p>
 
-      <a class="botao" href="#sobre">Vamos começar</a>
+      <p>
+        📍 Saída: Marina / Praia do Jacaré<br>
+        🕗 Horário: entre 8h e 9h<br>
+        🚤 Passeio privativo<br>
+        🔥 Churrasqueira a bordo<br>
+        🌊 Diversão e vistas incríveis
+      </p>
+
+      <a class="botao"
+         href="https://wa.me/5583993887309"
+         target="_blank"
+         rel="noopener noreferrer">
+        Consulte disponibilidade
+      </a>
     </section>
 
     <section class="conteudo" id="sobre">
-      <h2>Sobre o Bora Navegar</h2>
+      <h2>Uma experiência feita para você</h2>
 
       <p>
-        Um espaço para descobrir, explorar e transformar
-        ideias em novas jornadas. O primeiro passo começa aqui!
+        Aproveite um passeio privativo para curtir o mar,
+        contemplar belas paisagens e compartilhar momentos
+        especiais com quem você gosta.
       </p>
     </section>
 
     <section class="conteudo" id="contato">
-      <h2>Entre em contato</h2>
+      <h2>Vamos navegar?</h2>
 
       <p>
-        Em breve, novidades e novas formas de navegar
-        estarão disponíveis por aqui.
+        Entre em contato para consultar disponibilidade
+        e planejar seu passeio.
       </p>
+
+      <p style="margin-top: 15px;">
+        <strong>Contato profissional:</strong><br>
+        (83) 99388-7309
+      </p>
+
+      <a class="botao"
+         href="https://wa.me/5583993887309"
+         target="_blank"
+         rel="noopener noreferrer">
+        Fale conosco pelo WhatsApp
+      </a>
     </section>
+
   </main>
 
   <footer>
