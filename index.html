@@ -1,204 +1,161 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bora Navegar | Passeios de Lancha em João Pessoa</title>
+<meta name="description" content="Passeio de lancha privativo em João Pessoa — Rota do Sol. Segurança, conforto e paisagens inesquecíveis.">
 
-  <title>Bora Navegar | Passeios de Lancha</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+  :root {
+    --navy: #0a1f2e;
+    --navy-2: #0f2c40;
+    --teal: #bb9a3c;
+    --teal-dark: #8f7226;
+    --gold: #c9a227;
+    --gold-soft: #e8cf8a;
+    --gold-deep: #a8811c;
+    --sand: #f6f2ea;
+    --ink: #17232e;
+    --muted: #6b6250;
+    --white: #ffffff;
+    --shadow: 0 18px 44px rgba(10, 31, 46, .18);
+    --gold-line: linear-gradient(90deg, transparent, #a8811c, #e8cf8a, #a8811c, transparent);
+  }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f7f9;
-      color: #263746;
-    }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    header {
-      background: #123b52;
-      color: white;
-      padding: 22px;
-      text-align: center;
-    }
+  html { scroll-behavior: smooth; }
 
-    header h1 {
-      font-size: 30px;
-    }
+  body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--sand);
+    color: var(--ink);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    nav {
-      margin-top: 15px;
-    }
+  h1, h2, h3, .display {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: .2px;
+    line-height: 1.2;
+  }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 14px;
-    }
+  img { display: block; max-width: 100%; }
 
-    .hero {
-      text-align: center;
-      padding: 75px 20px;
-      background: linear-gradient(135deg, #d8edf2, #ffffff);
-    }
+  /* ---------- HEADER ---------- */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(10, 31, 46, .92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(232, 207, 138, .45);
+  }
 
-    .hero h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
+  .nav-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
 
-    .hero h3 {
-      font-size: 25px;
-      color: #167d91;
-      margin-bottom: 20px;
-    }
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: .5px;
+  }
 
-    .hero p {
-      font-size: 18px;
-      line-height: 1.8;
-      max-width: 650px;
-      margin: 0 auto 25px;
-    }
+  .logo span { color: var(--gold-soft); }
 
-    .botao {
-      display: inline-block;
-      background: #167d91;
-      color: white;
-      padding: 14px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 10px;
-    }
+  nav a {
+    color: rgba(255, 255, 255, .88);
+    text-decoration: none;
+    margin-left: 26px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .4px;
+    transition: color .25s ease;
+  }
 
-    .botao:hover {
-      background: #105d6b;
-    }
+  nav a:hover { color: var(--gold-soft); }
 
-    .conteudo {
-      max-width: 900px;
-      margin: 45px auto;
-      padding: 0 20px;
-      text-align: center;
-    }
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 22px;
+    color: var(--white);
+    background:
+      linear-gradient(180deg, rgba(10,31,46,.72) 0%, rgba(10,31,46,.55) 45%, rgba(10,31,46,.85) 100%),
+      url('https://cdn.oreateai.com/aiimage/upload/c110f8e391c4da649b4bd280/05c613e346c94ced4881d8f49e1623f5.jpeg') center/cover no-repeat;
+  }
 
-    .conteudo h2 {
-      margin-bottom: 15px;
-    }
+  .hero-inner { max-width: 780px; }
 
-    .conteudo p {
-      line-height: 1.8;
-    }
+  .eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--gold-soft);
+    border: 1px solid rgba(232, 207, 138, .5);
+    border-radius: 999px;
+    padding: 7px 18px;
+    margin-bottom: 26px;
+  }
 
-    footer {
-      background: #123b52;
-      color: white;
-      text-align: center;
-      padding: 22px;
-      margin-top: 50px;
-    }
+  .hero h1 {
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 14px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, .45);
+  }
 
-    @media (max-width: 600px) {
-      .hero h2 {
-        font-size: 28px;
-      }
+  .hero h1 em {
+    font-style: italic;
+    background: linear-gradient(120deg, #a8811c, #f2e2a8, #c9a227);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold-soft);
+  }
 
-      .hero h3 {
-        font-size: 22px;
-      }
+  .hero .rotulo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .85);
+    margin-bottom: 22px;
+  }
 
-      nav a {
-        display: inline-block;
-        margin: 8px;
-      }
-    }
-  </style>
-</head>
+  .hero p {
+    font-size: 1.08rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 18px;
+    color: rgba(255, 255, 255, .95);
+  }
 
-<body>
-
-  <header>
-    <h1>🌊 Bora Navegar</h1>
-
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#sobre">O passeio</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <section class="hero" id="inicio">
-      <h2>Passeio de Lancha em João Pessoa</h2>
-
-      <h3>Rota do Sol ☀️</h3>
-
-      <p>
-        Descubra o litoral de João Pessoa em um passeio
-        privativo, com segurança, conforto e paisagens
-        inesquecíveis.
-      </p>
-
-      <p>
-        📍 Saída: Marina / Praia do Jacaré<br>
-        🕗 Horário: entre 8h e 9h<br>
-        🚤 Passeio privativo<br>
-        🔥 Churrasqueira a bordo<br>
-        🌊 Diversão e vistas incríveis
-      </p>
-
-      <a class="botao"
-         href="https://wa.me/5583993887309"
-         target="_blank"
-         rel="noopener noreferrer">
-        Consulte disponibilidade
-      </a>
-    </section>
-
-    <section class="conteudo" id="sobre">
-      <h2>Uma experiência feita para você</h2>
-
-      <p>
-        Aproveite um passeio privativo para curtir o mar,
-        contemplar belas paisagens e compartilhar momentos
-        especiais com quem você gosta.
-      </p>
-    </section>
-
-    <section class="conteudo" id="contato">
-      <h2>Vamos navegar?</h2>
-
-      <p>
-        Entre em contato para consultar disponibilidade
-        e planejar seu passeio.
-      </p>
-
-      <p style="margin-top: 15px;">
-        <strong>Contato profissional:</strong><br>
-        (83) 99388-7309
-      </p>
-
-      <a class="botao"
-         href="https://wa.me/5583993887309"
-         target="_blank"
-         rel="noopener noreferrer">
-        Fale conosco pelo WhatsApp
-      </a>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>© 2026 Bora Navegar. Todos os direitos reservados.</p>
-  </footer>
-
-</body>
-</html>
-```
+  .linha-ouro {
+    width: 120px;
+    height: 2px;
+    background: var(--gold-line);
+    ma
