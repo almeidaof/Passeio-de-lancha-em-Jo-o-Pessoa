@@ -4,11 +4,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bora Navegar</title>
+
+  <title>Bora Navegar | Seu próximo destino</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f7f9;
+      color: #263746;
+    }
+
+    header {
+      background: #123b52;
+      color: white;
+      padding: 22px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 30px;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 14px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 85px 20px;
+      background: linear-gradient(135deg, #d8edf2, #ffffff);
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    .botao {
+      display: inline-block;
+      background: #167d91;
+      color: white;
+      padding: 14px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .conteudo {
+      max-width: 900px;
+      margin: 45px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .conteudo h2 {
+      margin-bottom: 15px;
+    }
+
+    .conteudo p {
+      line-height: 1.7;
+    }
+
+    footer {
+      background: #123b52;
+      color: white;
+      text-align: center;
+      padding: 22px;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 8px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Bora Navegar</h1>
+  <header>
+    <h1>🌊 Bora Navegar</h1>
+
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <h2>Seu próximo destino começa aqui!</h2>
+
+      <p>
+        Explore novas possibilidades, descubra lugares
+        incríveis e prepare-se para navegar por novas experiências.
+      </p>
+
+      <a class="botao" href="#sobre">Vamos começar</a>
+    </section>
+
+    <section class="conteudo" id="sobre">
+      <h2>Sobre o Bora Navegar</h2>
+
+      <p>
+        Um espaço para descobrir, explorar e transformar
+        ideias em novas jornadas. O primeiro passo começa aqui!
+      </p>
+    </section>
+
+    <section class="conteudo" id="contato">
+      <h2>Entre em contato</h2>
+
+      <p>
+        Em breve, novidades e novas formas de navegar
+        estarão disponíveis por aqui.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Bora Navegar. Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>
