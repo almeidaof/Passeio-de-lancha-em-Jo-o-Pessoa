@@ -158,4 +158,366 @@
     width: 120px;
     height: 2px;
     background: var(--gold-line);
-    ma
+    margin: 28px auto;
+  }
+
+  .botao {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold), var(--gold-soft));
+    color: #3a2c00;
+    padding: 15px 34px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: .3px;
+    margin-top: 12px;
+    box-shadow: 0 10px 26px rgba(201, 162, 39, .38);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+
+  .botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px rgba(201, 162, 39, .5);
+  }
+
+  .botao.secundario {
+    background: transparent;
+    color: var(--white);
+    border: 1.5px solid rgba(255,255,255,.65);
+    box-shadow: none;
+  }
+
+  .botao.secundario:hover { border-color: var(--gold-soft); color: var(--gold-soft); }
+
+  .hero-botoes { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+  /* ---------- SEÇÕES ---------- */
+  .secao { max-width: 1120px; margin: 0 auto; padding: 84px 22px; }
+
+  .secao-cabeca { text-align: center; max-width: 720px; margin: 0 auto 54px; }
+
+  .secao-cabeca .tag {
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--gold-deep);
+  }
+
+  .secao-cabeca h2 {
+    font-size: clamp(1.8rem, 4vw, 2.7rem);
+    color: var(--navy);
+    margin: 12px 0 14px;
+  }
+
+  .secao-cabeca p { color: var(--muted); font-weight: 300; }
+
+  /* ---------- DESTAQUES (cards de info) ---------- */
+  .destaques {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 8px;
+  }
+
+  .card-info {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 30px 22px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(10, 31, 46, .08);
+    border: 1px solid rgba(201, 162, 39, .22);
+    border-top: 3px solid var(--gold);
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+
+  .card-info:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
+
+  .card-info .icone { font-size: 30px; margin-bottom: 12px; }
+
+  .card-info h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: .3px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+
+  .card-info p { font-size: 14px; color: var(--muted); font-weight: 300; }
+
+  /* ---------- SOBRE (foto + texto) ---------- */
+  .sobre-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .sobre-grid img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(201, 162, 39, .35);
+    padding: 8px;
+    background: #fff;
+  }
+
+  .sobre-texto h2 {
+    font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+    color: var(--navy);
+    margin-bottom: 18px;
+  }
+
+  .sobre-texto p { color: var(--muted); font-weight: 300; margin-bottom: 16px; }
+
+  .lista-check { list-style: none; margin-top: 18px; }
+  .lista-check li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: var(--ink);
+  }
+  .lista-check li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--gold-deep);
+    font-weight: 700;
+  }
+
+  /* ---------- GALERIA ---------- */
+  .galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+  }
+
+  .galeria figure {
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(10, 31, 46, .14);
+    background: var(--navy);
+    border: 1px solid rgba(201, 162, 39, .3);
+  }
+
+  .galeria img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform .6s ease;
+  }
+
+  .galeria figure:hover img { transform: scale(1.07); }
+
+  .galeria figure.tall img { height: 420px; }
+
+  /* ---------- FAIXA CTA ---------- */
+  .faixa {
+    position: relative;
+    background: linear-gradient(135deg, #0f2c40, #0a1f2e 70%);
+    border-top: 1px solid rgba(232, 207, 138, .35);
+    border-bottom: 1px solid rgba(232, 207, 138, .35);
+    color: var(--white);
+    text-align: center;
+    padding: 84px 22px;
+    margin-top: 20px;
+  }
+
+  .faixa h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 14px;
+  }
+
+  .faixa p {
+    max-width: 560px;
+    margin: 0 auto 26px;
+    color: rgba(255,255,255,.9);
+    font-weight: 300;
+  }
+
+  .faixa .contato-numero {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--gold-soft);
+    margin-bottom: 24px;
+    display: block;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,.75);
+    text-align: center;
+    padding: 40px 22px;
+    font-size: 13px;
+    font-weight: 300;
+    border-top: 1px solid rgba(232, 207, 138, .35);
+  }
+
+  footer .logo-foot {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  /* ---------- REVEAL ANIM ---------- */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .8s ease, transform .8s ease; }
+  .reveal.ativo { opacity: 1; transform: none; }
+
+  /* ---------- RESPONSIVO ---------- */
+  @media (max-width: 860px) {
+    .sobre-grid { grid-template-columns: 1fr; gap: 30px; }
+    .sobre-grid img { height: 320px; }
+  }
+
+  @media (max-width: 600px) {
+    .nav-inner { justify-content: center; text-align: center; }
+    nav a { margin: 0 10px; font-size: 13px; }
+    .hero { min-height: 82vh; padding: 70px 20px; }
+    .secao { padding: 60px 20px; }
+    .galeria img { height: 240px; }
+    .galeria figure.tall img { height: 300px; }
+  }
+</style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav-inner">
+      <a href="#inicio" class="logo">Bora <span>Navegar</span></a>
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">O passeio</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-inner">
+        <span class="eyebrow">Passeio privativo · João Pessoa — PB</span>
+        <p class="rotulo">Rota do Sol</p>
+        <h1>Navegue pelo mar de <em>João Pessoa</em></h1>
+        <div class="linha-ouro"></div>
+        <p>
+          Um passeio de lancha privativo, com segurança, conforto e
+          paisagens inesquecíveis. Reúna quem você ama e viva o mar do jeito certo.
+        </p>
+        <div class="hero-botoes">
+          <a class="botao" href="https://wa.me/5583993887309" target="_blank" rel="noopener noreferrer">Consultar disponibilidade</a>
+          <a class="botao secundario" href="#galeria">Ver galeria</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO CARDS -->
+    <section class="secao" id="experiencia">
+      <div class="secao-cabeca reveal">
+        <span class="tag">A experiência</span>
+        <h2>Tudo preparado para o seu dia no mar</h2>
+        <p>Do embarque ao pôr do sol, cada detalhe pensado para você aproveitar sem preocupação.</p>
+      </div>
+
+      <div class="destaques">
+        <div class="card-info reveal">
+          <div class="icone">📍</div>
+          <h3>Ponto de saída</h3>
+          <p>Marina / Praia do Jacaré</p>
+        </div>
+        <div class="card-info reveal">
+          <div class="icone">🕗</div>
+          <h3>Horário</h3>
+          <p>Embarque entre 8h e 9h</p>
+        </div>
+        <div class="card-info reveal">
+          <div class="icone">🚤</div>
+          <h3>Passeio privativo</h3>
+          <p>Somente o seu grupo a bordo</p>
+        </div>
+        <div class="card-info reveal">
+          <div class="icone">🔥</div>
+          <h3>Churrasqueira a bordo</h3>
+          <p>Leve o seu churrasco e aproveite</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="secao" id="sobre">
+      <div class="sobre-grid">
+        <img class="reveal" src="https://cdn.oreateai.com/aiimage/upload/c110f8e391c4da649b4bd280/1781b3faffcef8a5d023a97eedabca2d.jpeg" alt="Solário de proa da lancha com estofados claros e marina ao fundo">
+        <div class="sobre-texto reveal">
+          <span class="tag" style="font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:600; color:var(--gold-deep);">Sobre o passeio</span>
+          <h2 style="margin-top:12px;">Uma experiência feita para você</h2>
+          <p>
+            A bordo de uma lancha Focker 255, você curte o mar com todo o conforto
+            de um passeio privativo: solário de proa, cabine com iluminação, som e
+            espaço de sobra para relaxar.
+          </p>
+          <ul class="lista-check">
+            <li>Solário de proa para tomar sol e relaxar</li>
+            <li>Churrasqueira a bordo</li>
+            <li>Cabine com som e iluminação em LED</li>
+            <li>Segurança e condução profissional</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section class="secao" id="galeria">
+      <div class="secao-cabeca reveal">
+        <span class="tag">Galeria</span>
+        <h2>Conheça a lancha por dentro e por fora</h2>
+        <p>Cada canto pensado para o seu conforto — do solário à cabine.</p>
+      </div>
+
+      <div class="galeria">
+        <figure class="reveal"><img src="https://cdn.oreateai.com/aiimage/upload/c110f8e391c4da649b4bd280/f528c9bf1a6417a83575ff444c528e05.jpeg" alt="Lateral da lancha Focker 255 em águas cristalinas"></figure>
+        <figure class="reveal"><img src="https://cdn.oreateai.com/aiimage/upload/c110f8e391c4da649b4bd280/8b3203d50ac25c024530c5d3ce279e40.jpeg" alt="Lancha ancorada com bandeira do Brasil e palmeiras ao fundo"></figure>
+        <figure class="reveal"><img src="https://cdn.oreateai.com/aiimage/upload/c110f8e391c4da649b4bd280/bab266002dded88a5feff8aaa45a9b71.jpeg" alt="Estofados do solário de proa com costura em losango"></figure>
+        <figure class="reveal"><img src="https://cdn.oreateai.com/aiimage/upload/c110f8e391c4da649b4bd280/9aeab66085c2e8325113b421b2680579.jpeg" alt="Cabine interna da lancha com iluminação LED azul"></figure>
+        <figure class="reveal"><img src="https://cdn.oreateai.com/aiimage/upload/c110f8e391c4da649b4bd280/2cb9a7ebc4bf328963b98cb45d8c9c31.jpeg" alt="Posto de comando da lancha com volante, GPS e instrumentos"></figure>
+        <figure class="reveal tall"><img src="https://cdn.oreateai.com/aiimage/upload/c110f8e391c4da649b4bd280/750ec4af9196c9cbbeae13de446ef70d.jpeg" alt="Lancha Focker 255 na marina, com motor Mercury e palmeiras"></figure>
+        <figure class="reveal"><img src="https://cdn.oreateai.com/aiimage/upload/c110f8e391c4da649b4bd280/90ceb6fa5b26c22d2d91703ef0896667.jpeg" alt="Lancha Alvorada ancorada próximo à praia com pessoas ao fundo"></figure>
+      </div>
+    </section>
+
+    <!-- CTA / CONTATO -->
+    <section class="faixa" id="contato">
+      <h2>Vamos navegar?</h2>
+      <p>Fale com a gente para consultar a disponibilidade e planejar o seu passeio.</p>
+      <span class="contato-numero">(83) 99388-7309</span><br>
+      <a class="botao" href="https://wa.me/5583993887309" target="_blank" rel="noopener noreferrer">Fale conosco pelo WhatsApp</a>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="logo-foot">Bora Navegar</div>
+    <p>Passeios privativos de lancha · João Pessoa — PB</p>
+    <p style="margin-top:10px;">© 2026 Bora Navegar. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('ativo'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+  </script>
+
+</body>
+</html>
